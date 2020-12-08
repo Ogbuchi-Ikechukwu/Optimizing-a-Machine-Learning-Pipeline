@@ -54,6 +54,7 @@ I can improve accuracy on the Hyperdrive logistic regression model by expanding 
 
 
 ## Cleanup
-I cleaned up the cluster after use as shown in my notebook. Code cell 20.
+I cleaned up the cluster after use. I double checked on the interface as shown below as it appeared the code_cell didn't run
+<img src="delete.png">
 
 
