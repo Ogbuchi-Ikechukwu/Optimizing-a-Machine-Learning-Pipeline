@@ -42,7 +42,7 @@ There were 28 models from my AutoML run and the best performing one was the “V
 The "VotingEnsemble" classifier estimates multiple base models and voting to combine the individual predictions to arrive at the final ones. It is a collection of several models working together on a single set known as ensemble. So in other words, the combined models vote for the best average score that makes the Voting Ensemble classifier. Just as illustrated below:
 
 <img src="vote.png">
-
+From code cell 14 output, the VotingEnsemble Classifier used the following estimator parameters: 'estimators': ['0', '1', '24', '22', '19', '15', '20'] to combine the following models: Lightgbmclassifier, xgboost classifier, extra trees classifier and sgd classifier wrapper to arrive at the final Ensemble model.
 Some of the hyperparameters used for the VotingEnsemble model include: min_samples_leaf set at 0.01, min_samples_split set at 0.01, min_weight_fraction_leaf set at 0.0,n_estimators at 50, n_jobs=1, oob_score=True, random_state=None and verbose=0,
 A snippet of the hyperparameter values used is shown below from the output of my code cell 11 and 14. 
 <img src="edit1.png">
