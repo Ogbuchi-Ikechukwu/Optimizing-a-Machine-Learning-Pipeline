@@ -37,8 +37,13 @@ I chose the BanditPolicy as my early stopping policy. It defines an early termin
 
 
 ## Description of Model and HyperParameters produced by AutoML
-There were 28 models from my AutoML run and the best performing one was the “VotingEnsemble” which gave me an accuracy of 91.79%. Automated machine learning picks an algorithm and hyperparameters for you and generates a model ready for deployment. Some of the hyperparameters used for the Ensemble model include: min_samples_leaf set at 0.01, min_samples_split set at 0.01, min_weight_fraction_leaf set at 0.0,n_estimators at 50, n_jobs=1, oob_score=True, random_state=None and verbose=0,
-A snippet of the hyperparameter values used is shown below from the output of my code cell 11 and 14.
+There were 28 models from my AutoML run and the best performing one was the “VotingEnsemble” which gave me an accuracy of 91.79%. Automated machine learning picks an algorithm and hyperparameters for you and generates a model ready for deployment. 
+
+The "VotingEnsemble" classifier estimates multiple base models and voting to combine the individual predictions to arrive at the final ones. It is a collection of several models working together on a single set known as ensemble. So in other words, the combined models vote for the best average score that makes the Voting Ensemble classifier. Just as illustrated below:
+
+
+Some of the hyperparameters used for the VotingEnsemble model include: min_samples_leaf set at 0.01, min_samples_split set at 0.01, min_weight_fraction_leaf set at 0.0,n_estimators at 50, n_jobs=1, oob_score=True, random_state=None and verbose=0,
+A snippet of the hyperparameter values used is shown below from the output of my code cell 11 and 14. 
 <img src="edit1.png">
 
 ## Comparison of the Models and their Performance
