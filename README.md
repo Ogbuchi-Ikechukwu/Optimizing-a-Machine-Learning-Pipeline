@@ -37,10 +37,9 @@ I chose the BanditPolicy as my early stopping policy. It defines an early termin
 
 
 ## Description of Model and HyperParameters produced by AutoML
-There were 28 models from my AutoML run and the best performing one was the “VotingEnsemble” which gave me an accuracy of 91.79%. Automated machine learning picks an algorithm and hyperparameters for you and generates a model ready for deployment. Some of the hyperparameters used for the Ensemble model include: primary_metric set as “Accuracy”, n_cross_validations set at 4, experiment_timout at 30mins, 'num_iterations' set at ‘1000’, "pipeline_fetch_max_batch_size" set at 1 and “early_stopping_n_iters" with value 10.
-A snippet of the hyperparameter values used is shown below from the output of my code cell 14.
-<img src="hyperparams_automl.png">
- <img src="accu1.png">
+There were 28 models from my AutoML run and the best performing one was the “VotingEnsemble” which gave me an accuracy of 91.79%. Automated machine learning picks an algorithm and hyperparameters for you and generates a model ready for deployment. Some of the hyperparameters used for the Ensemble model include: min_samples_leaf set at 0.01, min_samples_split set at 0.01, min_weight_fraction_leaf set at 0.0,n_estimators at 50, n_jobs=1, oob_score=True, random_state=None and verbose=0,
+A snippet of the hyperparameter values used is shown below from the output of my code cell 11 and 14.
+<img src="edit1.png">
 
 ## Comparison of the Models and their Performance
 The logistic regression created using HyperDrive gave me an accuracy of 91.41% while AutoML gave me 91.79%. The difference appears fractional, but it could mean a lot depending on the size of data involved. Based on this, AutoML performed better. The advantage I think the HyperDrive model has over the AutoML method is that it gives more control over the Machine Learning training process than its counterpart. If an organization does not really care much about the machine learning coding process, but more about results in a shorter time, AutoML will take the lead. Explaining the results of the AutoML method may be a little for difficult than explaining the model created with logistic regression plus Hyperdrive.
